@@ -1,0 +1,18 @@
+MY WORKOUTS V3 — DEVELOPMENT SOURCE
+
+1. Keep the private my-workouts-v2 repository unchanged.
+2. Upload the CONTENTS of this folder to the private my-workouts-v3 repository, including the hidden .github directory.
+3. Commit to main (or master). GitHub Actions runs “Build Android APK”.
+4. The workflow installs the XLSX dependency and bundles it into www/vendor before Capacitor sync.
+5. Download artifact “My-Workouts-V3-APK” only if the workflow succeeds.
+6. Install the debug APK and test the app on Android.
+
+Run local checks with:
+  npm install
+  npm run check
+
+Media access: use the in-app Android folder picker to select the Workout_gif folder. The app uses a persisted Storage Access Framework URI grant rather than broad file-management permission.
+
+Deferred for this pass: Google Fit / Health Connect / Fastrack sync and the extended data-integrity/backup/production-release assurance workstream.
+
+The source package is not itself a compiled APK. APK compilation and physical-device acceptance remain unverified until GitHub Actions and device tests succeed. Do not add passwords, signing keys or access tokens.
